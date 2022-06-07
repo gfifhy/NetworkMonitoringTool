@@ -1,0 +1,88 @@
+{% extends 'main.html' %}
+{% block head %}
+{% endblock %}
+{% block body %}
+<div class="d-flex flex-column flex-shrink-0 p-2 sidenav">
+    <a href="/" class="d-flex align-items-center text-decoration-none logo">
+        <svg class="bi me-2" width="40" height="32">
+        </svg>
+        <span class="fs-4">NMT</span>
+    </a>
+    <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+            <a href="#" class="active" aria-current="page">
+                <svg class="bi me-2" width="16" height="16">
+                    <use xlink:href="#home"></use>
+                </svg>
+                Overview
+            </a>
+        </li>
+        <li>
+            <a href="#" class="nav-link">
+                <svg class="bi me-2" width="16" height="16">
+                    <use xlink:href="#speedometer2"></use>
+                </svg>
+                Hosts
+            </a>
+        </li>
+        <li>
+            <a href="#" class="nav-link">
+                <svg class="bi me-2" width="16" height="16">
+                    <use xlink:href="#table"></use>
+                </svg>
+                Traceroute
+            </a>
+        </li>
+        <li>
+            <a href="#" class="nav-link">
+                <svg class="bi me-2" width="16" height="16">
+                    <use xlink:href="#table"></use>
+                </svg>
+                Check Port
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+
+<div class="content">
+    <div class="host-group">
+
+
+        <div class="col-md-4">
+            <div class="host-box  host-up">
+                <div class="host-box-header">
+                    HOST INFORMATION
+                </div>
+                <div class="host-info-group">
+                    <img src="{{ url_for('static',filename='style/images/devices.png') }}" alt="">
+                    <div class="host-info">
+                        <div class="host-ip">
+                            192.168.1.1
+                        </div>
+                        <div class="host-ping-result">
+                            <div>
+                                <div class="status">STATUS: UP</div>
+                                <div class="TIME">TIME: 32ms</div>
+                            </div>
+                            <div>
+                                <div class="status">BYTES: 32</div>
+                                <div class="status">TTL: 128</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </div>
+
+
+    </div>  
+</div>
+{% endblock %}
+
+
+
+
+
+

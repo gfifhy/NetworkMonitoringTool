@@ -1,0 +1,201 @@
+/*======================FONTS======================*/
+	@font-face {
+		font-family: gotham-light;
+		src: url(font/Gotham-Light.otf);
+	}
+
+	@font-face {
+		font-family: gotham;
+		src: url(font/Gotham-Bold.otf);
+	}
+
+	@font-face {
+		font-family: gotham-black;
+		src: url(font/Gotham-Black.otf);
+	}
+
+
+/*=====================UNIVERSAL CLASS ===================*/
+	:root{
+		--black: #0a0a0a;
+		--dark-gray: #121212;
+		--white: #f1f1f1;
+		--gray:  #252525;
+		--darker-gray: #1f1f1f ;
+		--cyan:  #4bfadd;
+		--red:  #b40522;
+	}
+	*{
+		font-family: gotham;
+		transition: 0.3s linear !important;
+	}
+	body, html{
+		padding: 0;
+		margin: 0;
+		background: var(--gray) !important;
+		color: var(--white) !important;
+	}
+	a{
+		text-decoration: none;
+	}
+	a:hover{
+		text-decoration: none;
+	}
+
+
+
+
+
+
+
+
+
+
+/*======================STYLING=======================*/
+.sidenav{
+	background: var(--dark-gray);
+	min-height: 100vh;
+	width: 230px;
+	position: fixed;
+}
+
+.nav-link{
+	color: var(--white) !important;
+	margin: 5px 0 !important;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	font-size: 13px;
+	padding: 14px 12px 14px 12px !important;
+}
+.nav-link:hover{
+	color: var(--cyan) !important;
+	background: var(--gray) !important;
+}
+
+.active{
+	background: var(--gray) !important;
+	color: var(--white) !important;
+	display: block;
+	padding: 0.5rem 1rem;
+	text-decoration: none;
+	border-left: var(--cyan) solid 4px;
+	cursor: default;
+	border-radius: 2px;
+	padding: 14px 12px 14px 8px;
+	margin: 5px 0;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	font-size: 13px;
+}
+
+.logo{
+	margin: 15px 0 !important;
+	color: var(--cyan);
+}
+
+
+.content{
+	/*width: calc(100vw - 230px);*/
+	min-height: 100vh;
+	padding:  20px 0px 20px 250px;
+	background: var(--black);
+
+}
+
+.host-group{
+	display: flex;
+	flex-wrap: wrap;
+}
+.host-box{
+	 /*height: 150px;
+	width: 250px; */
+	background: var(--white);
+	margin: 20px 29px 20px 30px;
+	background: var(--dark-gray);
+}
+.host-up{
+	border: 2px solid var(--cyan);
+}
+.host-down{
+	border: 2px solid var(--red);
+}
+
+.host-up .host-info-group .host-info .host-ip{
+	color: var(--cyan);
+}
+
+.host-down .host-info-group .host-info .host-ip{
+	color: var(--red);
+}
+
+.host-box .host-box-header{
+	text-transform: uppercase;
+	font-size: 12.5px;
+	letter-spacing: 1.3px;
+	background: var(--gray);
+	color: var(--white);
+	margin-bottom: 0px !important;
+	padding:  11px 0px 11px 15px;
+}
+
+
+.host-info-group{
+	display: flex;
+	padding: 15px 10px 15px 10px;
+	align-items: center;
+}
+.host-info-group img{
+	width: 100px;
+	height: 100px;
+}
+.host-info-group .host-info{
+	margin-left: 15px;
+}
+
+.host-info-group .host-info .host-ip{
+	color: var(--cyan);
+	font-size: 25px;
+	margin-bottom: 7px;
+}
+.host-info-group .host-info .host-ping-result{
+	display: flex;
+	flex-direction:  row;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: space-between;
+	align-items: center;
+
+}
+.host-info-group .host-info .host-ping-result div:nth-child(1) div{
+	color: var(--white);
+	text-transform: uppercase;
+	font-family: gotham-light;
+	line-height: 30px;
+	margin-right: 6px;
+}
+
+.host-info-group .host-info .host-ping-result div:nth-child(2) div{
+	color: var(--white);
+	font-family: gotham-light;
+	line-height: 30px;
+}
+
+.button-refresh{
+	margin: 30px 26px 30px 0px;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.refresh-hosts{
+	border: 1px solid var(--cyan);
+	padding: 15px 30px 15px 30px;
+	color: var(--cyan);
+	text-decoration: none;
+}
+.refresh-hosts:hover{
+	color: var(--dark-gray);
+	border-radius: 50px;
+	background: var(--cyan);
+	text-decoration: none;
+}
+

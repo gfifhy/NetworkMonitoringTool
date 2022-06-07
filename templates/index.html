@@ -1,0 +1,50 @@
+{% extends 'main.html' %}
+
+{% block head %}
+<title>Overview</title>
+{% endblock %}
+
+{% block body %}
+<div class="d-flex flex-column flex-shrink-0 p-2 sidenav">
+    <a href="{{ url_for('overview') }}" class="d-flex align-items-center text-decoration-none logo">
+        <svg class="bi me-2" width="40" height="32">
+        </svg>
+        <span class="fs-4">NMT</span>
+    </a>
+    <ul class="nav nav-pills flex-column mb-auto">
+        <li >
+            <a href="{{ url_for('overview') }}" class="active" aria-current="page">
+                <svg class="bi me-2" width="16" height="16">
+                    <use xlink:href="#home"></use>
+                </svg>
+                Overview
+            </a>
+        </li>
+        <li>
+            <a href="{{ url_for('cping') }}" class="nav-link">
+                <svg class="bi me-2" width="16" height="16">
+                    <use xlink:href="#speedometer2"></use>
+                </svg>
+                Hosts
+            </a>
+        </li>
+        <li>
+            <a href="#" class="nav-link">
+                <svg class="bi me-2" width="16" height="16">
+                    <use xlink:href="#table"></use>
+                </svg>
+                Traceroute
+            </a>
+        </li>
+        <li>
+            <a href="#" class="nav-link">
+                <svg class="bi me-2" width="16" height="16">
+                    <use xlink:href="#table"></use>
+                </svg>
+                Check Port
+            </a>
+        </li>
+    </ul>
+</div>
+
+{% endblock %}

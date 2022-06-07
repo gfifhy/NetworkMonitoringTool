@@ -1,0 +1,35 @@
+
+<div class="host-group" id="ping_result">
+    {%for host in hosts%}
+
+            <div class="col-md-4">
+            	{% if x[host]['status'] == 'up' %}
+                <div class="host-box host-up">
+                {% else %}
+                <div class="host-box host-down">
+                {% endif %}
+                    <div class="host-box-header">
+                        HOST INFORMATION
+                    </div>
+                    <div class="host-info-group">
+                        <img src="{{ url_for('static',filename='style/images/devices.png') }}" alt="">
+                        <div class="host-info">
+                            <div class="host-ip">
+                                {{host}}
+                            </div>
+                            <div class="host-ping-result">
+                                <div>
+                                    <div class="status">STATUS: {{x[host]['status']}}</div>
+                                    <div class="TIME">TIME: {{x[host]['time']}}ms</div>
+                                </div>
+                                <div>
+                                    <div class="status">BYTES: {{x[host]['bytes']}}</div>
+                                    <div class="status">TTL: {{x[host]['ttl']}}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    {%endfor%}
+</div>
